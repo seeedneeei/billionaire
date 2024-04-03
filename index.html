@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <title>ai la trieu phu??</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scene1">
+        <h1>nǐ hǎo</h1>
+        <p>What is the correct answer?</p>
+        <div class="options">
+            <button onclick="answer('A')">A. Gedagedigedagedao</button>
+            <button onclick="answer('B')">B. You're my sunshine</button>
+            <button onclick="answer('C')">C. Wo men jin</button>
+            <button onclick="answer('D')">D. How are you a?</button>
+        </div>
+        <img src="cat.jpg" alt="Image" class="placeholder-image">
+    </div>
+
+    <div id="scene2" style="display:none;"
+        <h1>You lose. Thks for the effort</h1>
+        <p>I've been married a long time ago</p>
+        <img src="nugget.jpg" alt="Scene for Answer A" class="scene-image">
+        <button onclick="goBack()">Go back</button>
+    </div>
+
+    <div id="scene3" style="display:none;"
+        <h1>LeBron James is very disappointed because you chose the wrong answer</h1>
+        <p>My only sunshine, you make me happy</p>
+        <img src="lebronjames.jpg" alt="Scene for Answer B" class="scene-image">
+        <button onclick="goBack()">Go back</button>
+    </div>
+
+    <div id="scene4" style="display:none;"
+        <h1>The hell is "women cheat"</h1>
+        <p>Sheng zhu ding shi chang chang</p>
+        <img src="womencheat.jpeg" alt="Scene for Answer C" class="scene-image">
+        <button onclick="goBack()">Go back</button>
+    </div>
+
+    <div id="scene5" style="display:none;"
+        <h1>Whatta you doing?></h1>
+        <p>FINALLY</p>
+        <div id="videoContainer" style="display:none;">
+            <video id="videoPlayer" controls>
+                <source src="https://drive.google.com/file/d/1ObfJnFlKLs3zM7PvwzIde_AcVVxuLvc6/view?usp=share_link" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <button id="showVideoButton">Click for a surprise</button>
+
+    <script>
+        function showVideo() {
+            document.getElementById("scene5").style.display = "block";
+
+            var videoContainer = document.getElementById("videoContainer");
+            videoContainer.style.display = "block";
+
+            var video = document.getElementById("videoPlayer");
+            video.play();
+        }
+
+        document.getElementById("showVideoButton").addEventListener("click",showVideo);
+    </script>
+        
+</body>
+</html>
